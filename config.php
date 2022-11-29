@@ -2,15 +2,15 @@
 
 /*
 |--------------------------------------------------------------------------
-| Demo Module Configurations
+| Knowledgebase Module Configurations
 |--------------------------------------------------------------------------
 |
 |
 */
 return [
-//    'name' => 'pippo',
-//    'seeder' => [],
-//    'providers' => [],
-//    'middleware' => [],
-//    'route_middleware' => ['web'],
+    'name' => 'knowledgebase',
+    'seeder' => [],
+    'providers' => [],
+    'middleware' => [],
+    'route_middleware' => ['web'],
 ];
