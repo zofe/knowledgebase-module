@@ -1,4 +1,4 @@
-# Demo Module
+# Knowledgebase Module
 
 This is a knowledge-base module for a Laravel application (>= 8) that show a minimal "knowledge base CRUD" in the rapyd-livewire stack.  
 [rapyd-livewire](https://github.com/zofe/rapyd-livewire) is a laravel library of blade components, livewire traits, and modules scaffolder that you can use to generate administration interfaces in a concise, reusable, uncluttered, and testable manner.
