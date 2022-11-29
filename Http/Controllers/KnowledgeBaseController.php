@@ -14,8 +14,8 @@ class KnowledgeBaseController extends Controller
 
     public function __construct()
     {
+        //$this->middleware('auth');
         view()->share('routePrefix', $this->routePrefix);
-        $this->middleware('auth');
     }
 
     public function index()
