@@ -2,11 +2,11 @@
 
 namespace App\Modules\Knowledgebase\Models;
 
-use App\Traits\SSearch;
+use Zofe\Rapyd\Traits\SSearch;
 use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Laravel\Scout\Searchable;
+
 
 /**
  * App\Models\Tag
@@ -38,7 +38,7 @@ use Laravel\Scout\Searchable;
 class Tag extends Model
 {
     use SoftDeletes, Sluggable;
-    use Searchable, SSearch;
+    use SSearch;
 
     public $table = 'tags';
 

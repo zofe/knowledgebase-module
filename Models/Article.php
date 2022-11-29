@@ -2,12 +2,11 @@
 
 namespace App\Modules\Knowledgebase\Models;
 
-use App\Models\CompanyRole;
-use App\Traits\SSearch;
+use Zofe\Rapyd\Traits\SSearch;
 use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Laravel\Scout\Searchable;
+
 
 /**
  * App\Models\Article
@@ -52,7 +51,7 @@ use Laravel\Scout\Searchable;
 class Article extends Model
 {
     use SoftDeletes, Sluggable;
-    use Searchable, SSearch;
+    use SSearch;
 
     public $table = 'articles';
 
@@ -106,11 +105,6 @@ class Article extends Model
     public function tags()
     {
         return $this->belongsToMany(Tag::class);
-    }
-
-    public function roles()
-    {
-        return $this->belongsToMany(CompanyRole::class,'role_has_articles','article_id','role_id');
     }
 
     public function scopeIsInternal($query, $isInternal=false, $excludeRole=false)

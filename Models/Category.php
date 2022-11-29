@@ -2,12 +2,12 @@
 
 namespace App\Modules\Knowledgebase\Models;
 
-use App\Models\CompanyRole;
-use App\Traits\SSearch;
+
+use Zofe\Rapyd\Traits\SSearch;
 use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Laravel\Scout\Searchable;
+
 
 /**
  * App\Models\Category
@@ -41,7 +41,7 @@ use Laravel\Scout\Searchable;
 class Category extends Model
 {
     use SoftDeletes, Sluggable;
-    use Searchable, SSearch;
+    use SSearch;
 
     public $table = 'categories';
 
@@ -88,10 +88,6 @@ class Category extends Model
         return $this->hasMany(Article::class)->orderBy('id', 'desc');
     }
 
-    public function roles()
-    {
-        return $this->belongsToMany(CompanyRole::class,'role_has_categories','category_id','role_id');
-    }
 
     public function sluggable(): array
     {
