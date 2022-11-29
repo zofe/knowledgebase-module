@@ -1,5 +1,5 @@
 {
-    "name": "zofe/knowledgebase",
+    "name": "zofe/knowledgebase-module",
     "description": "knowledgebase module for rapyd-livewire application",
     "license": "mit",
     "type": "rapyd-module",
