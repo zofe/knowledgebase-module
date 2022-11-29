@@ -1,0 +1,15 @@
+{
+    "name": "zofe/knowledgebase",
+    "description": "knowledgebase module for rapyd-livewire application",
+    "license": "mit",
+    "type": "rapyd-module",
+    "authors": [
+        {
+            "name": "Felice",
+            "email": "felice.ostuni@uania.com"
+        }
+    ],
+    "require": {
+        "cviebrock/eloquent-sluggable": "^9.0"
+    }
+}
