@@ -34,6 +34,9 @@
 
                 <x-rpd::nav-tabs title="Knowledgebase" class="navbar-light pb-4">
                     <x-rpd::nav-link label="Home" route="kbp.kb" />
+                    <x-rpd::nav-link label="Edit Articles" route="kb.articles.table" />
+                    <x-rpd::nav-link label="Edit Categories" route="kb.categories.table" />
+                    <x-rpd::nav-link label="Edit Tags" route="kb.tags.table" />
                 </x-rpd::nav-tabs>
 
                 <x-rpd::breadcrumbs class="breadcrumb-item" active="active" />

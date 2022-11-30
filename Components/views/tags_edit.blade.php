@@ -1,4 +1,6 @@
+@extends('knowledgebase::layouts.app')
 
+@section('main-content')
     <x-rpd::edit title="Tags Edit" wire:submit.prevent="prova">
 
         <x-slot name="buttons">
@@ -24,3 +26,4 @@
 
     </x-rpd::edit>
 
+@endsection

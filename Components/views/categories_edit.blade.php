@@ -1,4 +1,6 @@
+@extends('knowledgebase::layouts.app')
 
+@section('main-content')
     <x-rpd::edit title="Categories Edit">
 
         <x-slot name="buttons">
@@ -23,3 +25,4 @@
 
     </x-rpd::edit>
 
+@endsection
