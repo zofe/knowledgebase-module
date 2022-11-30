@@ -1,7 +1,3 @@
-@extends('knowledgebase::layouts.app')
-
-@section('main-content')
-
 <x-rpd::edit title="Articles Edit" xmlns:x-rpd="http://www.w3.org/1999/html">
 
         <x-slot name="buttons">
@@ -43,5 +39,3 @@
         </x-slot>
 
     </x-rpd::edit>
-
-@endsection

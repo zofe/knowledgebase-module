@@ -1,7 +1,4 @@
-@extends('knowledgebase::layouts.app')
-
-@section('main-content')
-    <x-rpd::edit title="Tags Edit" wire:submit.prevent="prova">
+ <x-rpd::edit title="Tags Edit" wire:submit.prevent="prova">
 
         <x-slot name="buttons">
             <a href="{{ route('kb.tags.table') }}" class="btn btn-primary">cancel</a>
@@ -25,5 +22,3 @@
         </x-slot>
 
     </x-rpd::edit>
-
-@endsection

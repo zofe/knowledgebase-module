@@ -1,7 +1,4 @@
-@extends('knowledgebase::layouts.app')
-
-@section('main-content')
-    <x-rpd::edit title="Categories Edit">
+ <x-rpd::edit title="Categories Edit">
 
         <x-slot name="buttons">
             <a href="{{ route('kb.categories.table') }}" class="btn btn-primary">cancel</a>
@@ -24,5 +21,3 @@
         </x-slot>
 
     </x-rpd::edit>
-
-@endsection

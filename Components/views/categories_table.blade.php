@@ -1,6 +1,3 @@
-@extends('knowledgebase::layouts.app')
-
-@section('main-content')
 <div>
         <x-rpd::table
             title="Categories"
@@ -48,5 +45,3 @@
         </x-rpd::table>
 
 </div>
-
-@endsection
