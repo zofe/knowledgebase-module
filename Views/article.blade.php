@@ -1,4 +1,4 @@
-@extends('knowledgebase:layouts.app')
+@extends('knowledgebase::layouts.app')
 
 @section('main-content')
 
