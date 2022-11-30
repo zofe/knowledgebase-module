@@ -19,9 +19,9 @@
 
 <main class="d-flex" x-data x-cloak>
 
-    <x-rpd::sidebar title="Rapyd.dev" class="p-3 text-white border-end">
+    <x-rpd::sidebar title="Knowledgebase" class="p-3 text-white border-end">
 
-        <x-rpd::nav-item label="Knowledgebase" route="kb" active="/kb" />
+        <x-rpd::nav-item label="Knowledgebase" route="kbp.kb" active="/kb" />
 
     </x-rpd::sidebar>
 
@@ -32,8 +32,8 @@
         <div class="container py-3">
             <header>
 
-                <x-rpd::nav-tabs title="Rapyd demo" class="navbar-light pb-4">
-                    <x-rpd::nav-link label="Home" route="kb" />
+                <x-rpd::nav-tabs title="Knowledgebase" class="navbar-light pb-4">
+                    <x-rpd::nav-link label="Home" route="kbp.kb" />
                 </x-rpd::nav-tabs>
 
                 <x-rpd::breadcrumbs class="breadcrumb-item" active="active" />
