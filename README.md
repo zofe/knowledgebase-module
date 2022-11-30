@@ -9,7 +9,12 @@ This is a knowledge-base module for a Laravel application (>= 8) that show a min
 Your laravel application must have rapyd-livewire package already installed first, then you can require this module using: 
 ```
 composer require zofe/rapyd-module-installer zofe/knowledgebase-module
+
+php artisan migrate 
+php artisan db:seed --class="App\\Modules\\Knowledgebase\\Database\\Seeders\\KnowledgeBaseSeeder"
 ```
+
+
 
 Please ensure that you have a `livewire.php` config file in your laravel config folder.  
 It's important to define the application layout file.  
@@ -21,7 +26,7 @@ Use this configuration for example:
 return [
     'class_namespace' => 'App\\Http\\Livewire',
     'view_path' => resource_path('views/livewire'),
-    'layout' => 'demo::layouts.app',
+    'layout' => 'knowledgebase::layouts.app',
     'asset_url' => null,
     'app_url' => null,
     'middleware_group' => 'web',
@@ -33,5 +38,5 @@ return [
 ```
 
 # Usage
-This command will create a folder "Knowledgebase" in your /app/Modules/ folder, then a demo will be enabled in `/knowledgebase/` route
+This command will create a folder "Knowledgebase" in your /app/Modules/ folder, then a demo will be enabled in `/kb/` route
 
