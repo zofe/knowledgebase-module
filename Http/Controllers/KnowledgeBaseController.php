@@ -23,9 +23,9 @@ class KnowledgeBaseController extends Controller
         $categories = Category::withCount('articles')
             ->paginate(20);
 
-        $popularArticles =  Article::orderBy('views_count', 'desc')->take(6)->get();
-        $latestArticles =  Article::orderBy('id', 'desc')->take(6)->get();
-        $footerCategories =  Category::take(6)->get();
+        $popularArticles = Article::orderBy('views_count', 'desc')->take(6)->get();
+        $latestArticles = Article::orderBy('id', 'desc')->take(6)->get();
+        $footerCategories = Category::take(6)->get();
 
         $popularTags =  Tag::take(20)->get();
 
