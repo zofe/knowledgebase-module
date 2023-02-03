@@ -16,6 +16,7 @@ php artisan db:seed --class="App\\Modules\\Knowledgebase\\Database\\Seeders\\Kno
 
 
 
+
 Please ensure that you have a `livewire.php` config file in your laravel config folder.  
 It's important to define the application layout file.  
 Use this configuration for example:
