@@ -10,6 +10,8 @@
         }
     ],
     "require": {
-        "cviebrock/eloquent-sluggable": "^8.0|^9.0"
+        "cviebrock/eloquent-sluggable": "^8.0|^9.0",
+        "zofe/rapyd-livewire": "^0.8.25",
+        "zofe/rapyd-module-installer": "dev-main"
     }
 }
