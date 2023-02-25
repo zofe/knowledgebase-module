@@ -11,8 +11,19 @@ php artisan migrate
 php artisan db:seed --class="App\\Modules\\Knowledgebase\\Database\\Seeders\\KnowledgeBaseSeeder"
 ```
 
+Note knowledge-base module use layout-module you may need to do:
+
+```
+cd app/Modules/Layout/
+
+npm i
+npm run dev
+```
+
+this will compile scss and copy css assets to your public project folder
 
 
 # Usage
-This command will create a folder "Knowledgebase" in your /app/Modules/ folder, then a demo will be enabled in `/kb/` route
+This module will be created in /app/Modules/Knowledgebase folder, 
+then a demo will be enabled in `/kb` route
 
