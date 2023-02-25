@@ -24,7 +24,7 @@
                                         <i class="far fa-folder"></i> {{ $category->name }}
                                         @if($category->articles->count()>6)
                                             &nbsp;
-                                            <span class="cat-count small text-gray-600">leggi tutti &raquo;</span>
+                                            <span class="cat-count small text-gray-600">read all &raquo;</span>
                                         @endif
                                     </a>
                                 </div>
