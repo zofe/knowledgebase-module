@@ -1,8 +1,6 @@
 <?php
 
-
-namespace App\Modules\Knowledgebase\Components;
-
+namespace App\Modules\Knowledgebase\Components\Admin;
 
 
 use App\Modules\Knowledgebase\Models\Tag;
@@ -52,11 +50,12 @@ class TagsEdit extends Component
         $this->validate();
         $this->tag->save();
 
-        return redirect()->to(route('kb.tags.table'));
+        return redirect()->to(route('kb.admin.tags.table'));
     }
 
     public function render()
     {
-        return view('knowledgebase::views.tags_edit');
+        return view('knowledgebase::Admin.views.tags_edit')
+            ->layout('knowledgebase::admin');
     }
 }

@@ -1,7 +1,7 @@
  <x-rpd::edit title="Tags Edit" wire:submit.prevent="prova">
 
         <x-slot name="buttons">
-            <a href="{{ route('kb.tags.table') }}" class="btn btn-primary">cancel</a>
+            <a href="{{ route('kb.admin.tags.table') }}" class="btn btn-primary">cancel</a>
         </x-slot>
 
         <div class="row">

@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Modules\Knowledgebase\Components;
+namespace App\Modules\Knowledgebase\Components\Admin;
 
 use App\Modules\Knowledgebase\Models\Category;
 use Livewire\Component;
 use Zofe\Rapyd\Traits\WithDataTable;
+
 
 class CategoriesTable extends Component
 {
@@ -35,6 +36,7 @@ class CategoriesTable extends Component
     {
         $items = $this->getDataSet();
 
-        return view('knowledgebase::views.categories_table', compact('items'));
+        return view('knowledgebase::Admin.views.categories_table', compact('items'))
+            ->layout('knowledgebase::admin');
     }
 }

@@ -1,10 +1,7 @@
 <?php
 
-namespace App\Modules\Knowledgebase\Components;
+namespace App\Modules\Knowledgebase\Components\Admin;
 
-
-
-use App\Modules\Knowledgebase\Models\Tag;
 use App\Modules\Knowledgebase\Models\Article;
 use App\Modules\Knowledgebase\Models\Category;
 use Cviebrock\EloquentSluggable\Services\SlugService;
@@ -96,13 +93,13 @@ class ArticlesEdit extends Component
 
         $this->article->save();
 
-        return redirect()->to(route('kb.articles.table'));
+        return redirect()->to(route('kb.admin.articles.table'));
     }
-
 
 
     public function render()
     {
-        return view('knowledgebase::views.articles_edit');
+        return view('knowledgebase::Admin.views.articles_edit')
+            ->layout('knowledgebase::admin');
     }
 }

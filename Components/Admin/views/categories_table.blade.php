@@ -12,7 +12,7 @@
 
 
             <x-slot name="buttons">
-                <a href="{{ route('kb.categories.table') }}" class="btn btn-dark">reset</a>
+                <a href="{{ route('kb.admin.categories.table') }}" class="btn btn-dark">reset</a>
             </x-slot>
 
             <table class="table">
@@ -33,7 +33,7 @@
                 @foreach ($items as $category)
                     <tr>
                         <td>
-                            <a href="{{ route('kb.categories.edit',$category->id) }}">{{ $category->id }}</a>
+                            <a href="{{ route('kb.admin.categories.edit',$category->id) }}">{{ $category->id }}</a>
                         </td>
                         <td>{{ $category->name }}</td>
                         <td>{{ $category->slug }}</td>

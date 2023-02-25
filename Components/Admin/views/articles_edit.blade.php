@@ -1,7 +1,7 @@
 <x-rpd::edit title="Articles Edit" xmlns:x-rpd="http://www.w3.org/1999/html">
 
         <x-slot name="buttons">
-            <a href="{{ route('kb.articles.table') }}" class="btn btn-primary">cancel</a>
+            <a href="{{ route('kb.admin.articles.table') }}" class="btn btn-primary">cancel</a>
         </x-slot>
 
         <div class="row">
@@ -19,7 +19,7 @@
             </div>
             <div class="form-group col-md-6">
 
-                <x-rpd::select-list model="roles" multiple :options="$available_roles" endpoint="/ajax/roles" label="Roles" />
+{{--                <x-rpd::select-list model="roles" multiple :options="$available_roles" endpoint="/ajax/roles" label="Roles" />--}}
 
 {{--                <x-rpd::date-time model="date" format="dd/MM/yyyy HH:mm:ss" value-format="yyyy-MM-dd HH:mm:ss" label="Data" />--}}
 {{--                <x-rpd::date model="date" format="dd/MM/yyyy" value-format="yyyy-MM-dd" label="Data" />--}}

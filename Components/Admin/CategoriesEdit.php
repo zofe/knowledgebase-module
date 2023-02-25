@@ -1,18 +1,19 @@
 <?php
 
-namespace App\Modules\Knowledgebase\Components;
+namespace App\Modules\Knowledgebase\Components\Admin;
 
 
-use App\Models\CompanyRole;
 use App\Modules\Knowledgebase\Models\Category;
 use Cviebrock\EloquentSluggable\Services\SlugService;
 use Livewire\Component;
 
 
-
 class CategoriesEdit extends Component
 {
     public $category;
+
+    public  $roles = [];
+    public $available_roles = [];
 
     protected $rules = [
         'category.name' => 'required',
@@ -48,10 +49,10 @@ class CategoriesEdit extends Component
         $this->category = $category;
 
 
-        $this->roles = ($category) ? $this->category->roles->pluck('id') :
-            CompanyRole::query()->get()->pluck('id')->toArray();
-
-        $this->available_roles = CompanyRole::query()->get()->pluck('name','id');
+//        $this->roles = ($category) ? $this->category->roles->pluck('id') :
+//            CompanyRole::query()->get()->pluck('id')->toArray();
+//
+//        $this->available_roles = CompanyRole::query()->get()->pluck('name','id');
     }
 
     public function save()
@@ -59,7 +60,7 @@ class CategoriesEdit extends Component
         $this->validate();
         $this->category->save();
 
-        return redirect()->to(route('kb.categories.table'));
+        return redirect()->to(route('kb.admin.categories.table'));
     }
 
     public function delete()
@@ -74,6 +75,7 @@ class CategoriesEdit extends Component
 
     public function render()
     {
-        return view('knowledgebase::views.categories_edit');
+        return view('knowledgebase::Admin.views.categories_edit')
+            ->layout('knowledgebase::admin');
     }
 }

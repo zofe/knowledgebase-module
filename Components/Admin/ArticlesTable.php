@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Modules\Knowledgebase\Components;
+namespace App\Modules\Knowledgebase\Components\Admin;
 
 use App\Modules\Knowledgebase\Models\Article;
 use Livewire\Component;
@@ -42,6 +42,7 @@ class ArticlesTable extends Component
     {
         $items = $this->getDataSet();
 
-        return view('knowledgebase::views.articles_table', compact('items'));
+        return view('knowledgebase::Admin.views.articles_table', compact('items'))
+            ->layout('knowledgebase::admin');
     }
 }
