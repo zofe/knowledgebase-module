@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Modules\Knowledgebase\Components;
+namespace App\Modules\Knowledgebase\Components\Admin;
 
 use App\Modules\Knowledgebase\Models\Tag;
 use Livewire\Component;
@@ -36,6 +36,7 @@ class TagsTable extends Component
     {
         $items = $this->getDataSet();
 
-        return view('knowledgebase::views.tags_table', compact('items'));
+        return view('knowledgebase::Admin.views.tags_table', compact('items'))
+            ->layout('knowledgebase::admin');
     }
 }

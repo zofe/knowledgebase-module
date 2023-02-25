@@ -1,6 +1,7 @@
 <div>
+
         <x-rpd::table
-            title="Tags"
+            title="Articles"
             :items="$items"
         >
 
@@ -12,7 +13,7 @@
 
 
             <x-slot name="buttons">
-                <a href="{{ route('kb.tags.table') }}" class="btn btn-dark">reset</a>
+                <a href="{{ route('kb.admin.articles.table') }}" class="btn btn-dark">reset</a>
             </x-slot>
 
             <table class="table">
@@ -22,7 +23,7 @@
                         <x-rpd::sort model="id" label="id" />
                     </th>
                     <th>
-                        <x-rpd::sort model="name" label="name" />
+                        <x-rpd::sort model="title" label="title" />
                     </th>
                     <th>slug</th>
 
@@ -30,13 +31,13 @@
                 </tr>
                 </thead>
                 <tbody>
-                @foreach ($items as $tag)
+                @foreach ($items as $article)
                     <tr>
                         <td>
-                            <a href="{{ route('kb.tags.edit',$tag->id) }}">{{ $tag->id }}</a>
+                            <a href="{{ route('kb.admin.articles.edit',$article->id) }}">{{ $article->id }}</a>
                         </td>
-                        <td>{{ $tag->name }}</td>
-                        <td>{{ $tag->slug }}</td>
+                        <td>{{ $article->title }}</td>
+                        <td>{{ $article->slug }}</td>
                     </tr>
                 @endforeach
                 </tbody>
@@ -45,3 +46,4 @@
         </x-rpd::table>
 
 </div>
+

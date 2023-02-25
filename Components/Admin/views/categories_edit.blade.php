@@ -1,7 +1,7 @@
  <x-rpd::edit title="Categories Edit">
 
         <x-slot name="buttons">
-            <a href="{{ route('kb.categories.table') }}" class="btn btn-primary">cancel</a>
+            <a href="{{ route('kb.admin.categories.table') }}" class="btn btn-primary">cancel</a>
         </x-slot>
 
         <div class="row">
